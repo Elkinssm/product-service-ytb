@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: dev
+  #  data:
+  #    mongodb:
+  #      uri: mongodb://127.0.0.1:27017/productdb
+  application:
+    name: product-microservice
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port: 0
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

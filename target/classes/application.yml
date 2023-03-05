@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      profile: dev
+#  data:
+#    mongodb:
+#      uri: mongodb://127.0.0.1:27017/productdb
+  application:
+    name: product-microservice
+server:
+  port: 0
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
